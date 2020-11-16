@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Review{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+   <!-- <p>The predicted rating page of {{review.get('Review')}}</p> -->
+    <h1>Category:{{review.get('Category')}}</h1><h2>Review:{{review.get('Review')}}</h2><h1>Rating:{{review.get('Predict rating')}}</h1>"
+
+{% endblock %}
