@@ -38,6 +38,32 @@ def login():
             flash("Already predicted a review!\nClick button for new prediction")
             return redirect(url_for("review"))
         return render_template("login.html")
+        
+
+@app.route("/login2", methods=["POST"])
+def login2():
+    if request.method == "POST":
+        session.permanent = True
+        json_data = request.get_json()
+        # {'Category': 'Pets', 'review': 'the pets grommers are h'}
+        print(json_data)
+        category = json_data['Category'].replace(" ", "_")
+        review = json_data['Review']
+       
+        # predict
+        filename = category + "_yelp_review_predict_star.pkl"
+        with open(filename, 'rb') as infile:
+            model = pickle.load(infile)
+            review_rating = model.predict([review])
+
+        session["review"] = {'Category': category,
+                            'Review': review,
+                            'Predict rating': int(review_rating[0])}
+        flash("Input Review Successful!")
+        
+        return session["review"]
+
+
 @app.route("/review")
 def review():
     if "review" in session:
