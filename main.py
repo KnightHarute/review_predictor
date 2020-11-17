@@ -42,6 +42,14 @@ def login():
 
 @app.route("/login2", methods=["POST"])
 def login2():
+    '''
+    test:
+    
+    {
+        "Category": "Pets",
+        "Review":"nice pet for me "
+    }
+    '''
     if request.method == "POST":
         session.permanent = True
         json_data = request.get_json()
