@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "yelp-review-api-01",
+  "private_key_id": "9ba27b4ac961ac663908bed4b61a30f523c18629",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuiuVgcnL5J+2f\n5kK+Bef81h6rQB8KuRUyNkVI0CnDZVF4BMQAdwNBA/SNU1cMdy7aIun3EMaHfWKP\ncdeNjrCwLidq7ogK5iviB7EX9HVlH/e8rC2gJ1hQSzW+1i0zxJNo2JDSOTXG9VYd\nyBR4w4t99S8/ToUFkZG+v8MlYMJ59P94TmMI75CUqE7BotBiWT986t05pU+LAf1n\nEb4CTEm7/LrtwF/Gf0AwvoxiiGfmPyJ1cJIFyyKgJSyKSRYEk6WqhiyF1mGzBRav\nzb7HEJMZqlTV4IiV9qPWRn2EhmlZDUyjLOx6sFCewFaCrJd95TJTmCCAhdjf0YGA\ny9kusv0tAgMBAAECggEACSxkI1DzPCdDfNVWLyoHeA6h3y1teZEM1+N/JIqfk0qC\ngQy7vMGEh9jRyXwL6xa4J+n7WCCcf+JQuTTKF9bGxa+woypaYeZDKqvtpxJnpB24\nFcVf2CxmiWvL1+s7m3OqrVvqep4GoUhjfbO2aGVwnKQJAb+voUFgwqt4nGuM379w\n1JK1+K9W99x3vxhOlZ+DZn9USECsAaUDZyQ8bW8bY35ab9fPr57S5fZmeMAPALW0\nWKmDi6Szo9fwI/HD0Nni4bIByMzKT0wGY/FULCkj7Vp2oxz6i4uepEH2JuUlfQDb\n0TH3zzNZe2MToYxmpjjNVkGO9ZRW6cmayL2iWH3SeQKBgQDYGV6msqfdfnwt21mQ\n0YmyqjJxpLsv01vxGbEXnjrLAPNCcDj3rPjwmQr21nMI8dbDwjEraNJ//ufj3zxL\njioNksN3JJe7ZifD+B2DCMPvsBMApIxIiZISlKUVWocbUz6rt7B3R/cMaBuaSew6\nXbg8ossMNIkZ2MHEPTT19h3LSQKBgQDOxTh+qajyPXznU01HhgB4uV8bOd8/TL7j\nFbFln8pn3NFGbnXFdGcQFKqHH55yiZouTQn1nJZiPOKJVPW04bICzW1WY/7N1W1V\nyr4BbNrmFLDz1uGufz8/3O753eFsUrGGnJVTI6+r4G/HVHP4OQvpmkOgmKqmja2S\nV2vSwVsexQKBgARAE32B3A1eNIEOZGeVx3iNImrby5a4OIG4eKQ3R37AqQgwft5Y\nN5k72VxbgW22m/vDsQXijOlZkSQJOv1dcXRM461POfDEpJmVIrd2D6yCMQ19Lwkq\nM4ZMCCcwXaHq9DuaZE0kTDahQZG6THwlZb9DkGzQB7ZLbhw2+/iue42JAoGAQhgu\n3+YxuAVJqNQq7sL54Z03todAQoawufwUMazrUVn3l3D1uoFj9HL2s6y6xFgR7dz4\nYweD1rEppMaAqCpA8b5ixeu+5mLjyTm+lMwMCOHyUm+Mwm+wcySXS03Oogao8qOY\n4/OTUviyImBvlZf+o9SI64wBeK3vHslNERh3nRUCgYEA06o4rib4LUegrAnT4Grq\nOYy/65asPN9+Auy0RJuWOqfDmrYb9F2myEuT5id1Ztec/9EjDt5Apsn42LYEZtHM\ngqUFge2JbLX1P37XGUzruB5JK2P4eKNu6vCpOLT++J2ks+mg9YZS193ZZYbx0iEO\nTDnYrGoTyc26SNe+z9o+7jo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "yelp-review-api-01@appspot.gserviceaccount.com",
+  "client_id": "112199881222680489543",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/yelp-review-api-01%40appspot.gserviceaccount.com"
+}
