@@ -1,5 +1,7 @@
 # review_predictor
 known error in dev_test_error branch in "login3"
+
+/n
 yelp-review-api-01-9ba27b4ac961.json is the credentials file, but I don't know how to use it
 
 pip install google-cloud-storage
