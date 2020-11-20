@@ -4,10 +4,11 @@ import numpy as np
 from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
 
+
 app = Flask(__name__)
 app.secret_key = "CSCI626"
 # use timedelta to let the session store data for 2 days or 30 mins
-app.permanent_session_lifetime = timedelta(minutes=2)
+app.permanent_session_lifetime = timedelta(minutes=5)
 
 @app.route("/")
 def home():
@@ -38,6 +39,10 @@ def login():
             flash("Already predicted a review!\nClick button for new prediction")
             return redirect(url_for("review"))
         return render_template("login.html")
+
+
+
+
 @app.route("/review")
 def review():
     if "review" in session:
@@ -67,4 +72,4 @@ def logout():
 #     return redirect(url_for("user", name="Admin!"))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
