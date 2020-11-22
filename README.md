@@ -1,3 +1,3 @@
 # review_predictor
 Now available categories:
-  Pets, Auto Repair
+  Pets, Auto Repair, Nail Salons
