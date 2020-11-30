@@ -6,7 +6,7 @@ from datetime import timedelta
 
 
 app = Flask(__name__)
-app.secret_key = "CSCI626"
+app.secret_key = "CSCI"
 # use timedelta to let the session store data for 2 days or 30 mins
 app.permanent_session_lifetime = timedelta(minutes=5)
 
@@ -15,8 +15,8 @@ def home():
     return render_template("index.html")
     #return render_template("index.html", content=name, r=2)
 
-@app.route("/login", methods=["POST","GET"])
-def login():
+@app.route("/predictor", methods=["POST","GET"])
+def predictor():
     if request.method == "POST":
         session.permanent = True
         category = request.form['cate']
@@ -38,7 +38,7 @@ def login():
         if "review" in session:
             flash("Already predicted a review!\nClick button for new prediction")
             return redirect(url_for("review"))
-        return render_template("login.html")
+        return render_template("predictor.html")
 
 
 
@@ -51,16 +51,16 @@ def review():
 
     else:
         flash("Already predicted a review!\nClick button for new prediction")
-        return redirect(url_for("login"))
+        return redirect(url_for("predictor"))
 
-@app.route("/logout")
-def logout():
+@app.route("/clear")
+def clear():
     # if "review" in session:
     #     review = session["review"]
     # flash(f"<h2>Clearing the old review:{review.get('Review')}</h2>\n<h2>Prepare for another review</h2>", "info")
     flash("CLEAR, Ready to Predict another review", "info")
     session.pop("review", None)
-    return redirect(url_for("login"))
+    return redirect(url_for("predictor"))
 
 
 # @app.route("/<name>")
@@ -73,3 +73,5 @@ def logout():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
+
+
