@@ -1,4 +1,4 @@
-#bruch dev_vue for development of vue frontend
+#branch dev_vue for development of vue frontend
 # review_predictor
 Finall Supported categories:
 Pets, Auto Repair, Nail Salons, Real Estate, Fitness, Doctors, Hair Removal, Education
