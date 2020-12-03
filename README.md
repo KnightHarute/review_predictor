@@ -1,3 +1,4 @@
+#This branch is for vue front end
 # review_predictor
 Finall Supported categories:
 Pets, Auto Repair, Nail Salons, Real Estate, Fitness, Doctors, Hair Removal, Education
