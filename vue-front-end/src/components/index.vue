@@ -5,34 +5,33 @@
             <el-main>
                 <el-row type="flex" justify="center">
                     <el-col :span="12" style="text-align: center">
-                        <span style="font-size: 50px"><strong>Review Rating Predictor</strong></span>
+                        <span style="font-size: 52px"><strong>Review Rating Predictor v2.0</strong></span>
                     </el-col>
                 </el-row>
 
                 <el-row type="flex" justify="center">
                     <el-col :span="12" style="text-align: center">
-                        <span style="font-size: 24px">Please input a following category</span>
+                        <span style="font-size: 32px">Powered by <strong>Linear Support Vector Regression</strong></span>
                     </el-col>
                 </el-row>
 
                 <el-row type="flex" justify="center">
                     <el-col :span="12" style="text-align: center">
-                        <span style="font-size: 20px">Still UnderConstruction</span>
+                        <span style="font-size: 24px"><strong>Now support for All kinds of business</strong></span>
                     </el-col>
                 </el-row>
                 <el-row type="flex" justify="center">
                     <el-col :span="12" style="text-align: center">
-                        <span style="font-size: 24px"><strong>Supported Category: Pets, Auto Repair, Nail Salons,
-                            Real Estate, Fitness, Doctors, Hair Removal, Education</strong></span>
+                        <span style="font-size: 20px">No Need for Selecting Category</span>
                     </el-col>
                 </el-row>
 
                 <el-row type="flex" justify="center" style="margin-top: 15px">
                     <el-col :span="12">
                         <el-form ref="form" :model="form" label-width="80px">
-                            <el-form-item label="category:">
-                                <el-input v-model="form.category"></el-input>
-                            </el-form-item>
+<!--                            <el-form-item label="category:">-->
+<!--                                <el-input v-model="form.category"></el-input>-->
+<!--                            </el-form-item>-->
 
                             <el-form-item label="Review:">
                                 <el-input autosize type="textarea" v-model="form.review"></el-input>
@@ -56,7 +55,7 @@
 </template>
 
 <script>
-    import axios from 'axios';//this.axios使用
+    import axios from 'axios';//this.axios
 
     export default {
         name: 'app',
@@ -64,7 +63,7 @@
         data() {
             return {
                 form: {
-                    category: '',
+                    // category: '',
                     review: '',
                     rating: ''
                 },
@@ -78,7 +77,9 @@
             },
 
             onsubmit() {
-                if(this.form.category==='' || this.form.review==='' ){
+
+                //if(this.form.category==='' || this.form.review==='' ){
+                if(this.form.review===''){
                     this.$message('input cannot be empty');
                     return false;
                 }
@@ -87,8 +88,10 @@
                 axios({
                     method: 'post',
                     url: 'http://149.28.91.13:5000/sub',
+                    // url: 'sub',
+
                     data: {
-                        "category":this.form.category,
+                        // "category":this.form.category,
                         "review":this.form.review
                     }
                 }).then(res => {
@@ -100,7 +103,7 @@
                         console.log(error.response.status);
                         console.log(error.response.headers);
 
-                        this.$message('NOT supported category, NOTE: case sensitive');
+                        this.$message('Connection failed. Error code:500');
 
                     }
                 })
@@ -111,7 +114,7 @@
             clear() {
                 this.status = false;
                 this.form = {
-                    category: '',
+                    // category: '',
                     review: '',
                     rating: ''
                 }
